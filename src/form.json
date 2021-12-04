@@ -1,0 +1,61 @@
+{
+    "title": "User Registration Form",
+    "fields": [
+        {
+            "id": "firstname",
+            "label": "First Name",
+            "required": true,
+            "type": "text"
+        },
+        {
+            "id": "lastname",
+            "label": "Last Name",
+            "required": true,
+            "type": "text"
+        },
+        {
+            "id": "email",
+            "label": "Email",
+            "required": true,
+            "type": "email"
+        },
+        {
+            "id": "dob",
+            "label": "Date of Birth",
+            "type": "date"
+        },
+        {
+            "id": "terms",
+            "label": "I agree to terms & conditions",
+            "required": true,
+            "type": "checkbox"
+        },
+        {
+            "id": "promotions",
+            "label": "Sign up for promotional emails",
+            "type": "checkbox"
+        },
+        {
+            "id": "recommendations",
+            "label": "Send me personal recommendations",
+            "type": "checkbox",
+            "validations": {
+                "show": {
+                    "id": "promotions",
+                    "value": "true"
+                }
+            }
+        },
+        {
+            "id": "submit",
+            "label": "Register",
+            "type": "button",
+            "validations": {
+                "enable": {
+                    "id": "terms",
+                    "value": "true"
+                }
+            }
+        }
+    ]
+}

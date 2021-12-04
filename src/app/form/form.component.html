@@ -1,0 +1,7 @@
+<form [formGroup]="registrationForm">
+    <ng-container *ngFor = "let field of visibleFields">
+        <app-form-input [control]="field" [parentForm]="registrationForm" (detectChange)="detectChange()"
+            [disabled]="field.validations && !this.isValid(field.validations.enable, 'enable')">
+        </app-form-input>
+    </ng-container>
+</form>

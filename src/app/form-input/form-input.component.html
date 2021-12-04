@@ -1,0 +1,25 @@
+<div [formGroup]="parentForm" class="form-element">
+    <div class="form-label" *ngIf="control.type!='button' && control.type!='checkbox'">
+        <label for="control.id" [class.red]="invalid">
+            {{control.label}}&nbsp;<span *ngIf="required">*</span>
+        </label>
+    </div>
+    <div class="form-control">
+        <ng-container *ngIf="control.type == 'text'">
+            <input autocomplete="off" [id]="control.id" type="text" [formControlName]="control.id" (change)="valueChanged()">
+        </ng-container>
+        <ng-container *ngIf="control.type == 'email'">
+            <input autocomplete="off" [id]="control.id" type="email" [formControlName]="control.id" (change)="valueChanged()">
+        </ng-container>
+        <ng-container *ngIf="control.type == 'date'">
+            <input autocomplete="off" [id]="control.id" type="date" [formControlName]="control.id" (change)="valueChanged()">
+        </ng-container>
+        <ng-container *ngIf="control.type == 'checkbox'">
+            <input autocomplete="off" [id]="control.id" type="checkbox" [formControlName]="control.id" (change)="valueChanged()">
+            <label for="control.id">{{control.label}}</label>
+        </ng-container>
+    </div>
+    <div class="form-label" *ngIf="control.type=='button'">
+        <button [id]="control.id" [disabled]="disabled">{{control.label}}</button>
+    </div>
+</div>
