@@ -1,6 +1,6 @@
-# CustomizableForm
+# Customizable Form
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.3.
+Dynamically built forms, which uses a JSOn specification file for identifying the User-Interface requirements. This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.3.
 
 ## Development server
 
